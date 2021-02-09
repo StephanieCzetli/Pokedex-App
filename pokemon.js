@@ -1,15 +1,20 @@
-/*const express = require('express');
-const multer = require('multer');
-const upload = multer({ dest: __dirname + '/uploads/images' });
+const express = require('express')
+const app = express()
+const port = 3000
 
 
-const app = express();
-const PORT = 3000;
+fetch("https://pokeapi.co/api/v2")
+    .then(response => response.json())
+    .then(document => {
+        return render(document)
+            .then(rendered => {
+                cacheInDatabase(rendered);
+            })
+            .catch(error => handle(error));
 
-app.use(express.static());
-app.post('/upload', upload.single('photo'), (req, res) => {
-
+    });
+app.listen(port, () => {
+    console.log(`Pokedex app listening at http://localhost:${port}`)
 });
-app.listen(PORT, () => {
-    console.log('Listeniing at' + PORT);
-}); */
+
+const localhost = "http://localhost:3000";
