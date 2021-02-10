@@ -1,4 +1,4 @@
-const express = require('express')
+/*const express = require('express')
 const app = express()
 const port = 3000
 
@@ -33,4 +33,4 @@ function myFunction() {
 }
 
 
-const localhost = "http://localhost:3000";
+const localhost = "http://localhost:3000"; * /
