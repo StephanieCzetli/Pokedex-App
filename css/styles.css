@@ -1,0 +1,31 @@
+
+header {
+  text-align: center;
+}
+
+.grid {
+  display: grid; /*create grid container on which to place grid card*/
+  border: 2px solid black; /*temporary style rule*/
+  grid-template-columns: repeat(3, 1fr); /*create 3 columns, 1 fr each*/
+  grid-template-rows: repeat(2, 5vw); /*create 2 rows, 1fr each*/
+  column-gap: 4rem; /*slightly wider gap betw columns*/
+  row-gap: 1rem; /*slightly narrower gap betw rows*/
+  padding: 2rem;  /*add padding betw grid and location items*/
+}
+
+.grid-loc { /**/
+  display: grid;
+  border: 1px dashed red; /*temporary style rule*/
+  
+}
+
+.card {
+  border: 1px solid black;
+}
+
+.btn { /*simple styles for button*/
+  margin: 1rem;
+  padding: .5rem;
+}
+
+
