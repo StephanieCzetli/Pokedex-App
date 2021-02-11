@@ -4,9 +4,47 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/styles.css">
     <title>Document</title>
 </head>
 <body>
-    
+
+<header>
+    <h1>Pokedex</h1>
+</header>
+
+<main>
+
+<!-- grid container to hold all pokemon cards -->
+<div class="grid">
+<!-- location on grid container for single card -->
+    <div class="grid-loc">
+        <!-- grid container "card" on which to place items "name, number, image"-->
+        
+        <h2 class="pokeName">Name</h2>
+        <h2 class="pokeNumber">Number</h2>
+        <figure>
+            <img class="pokePhoto" src="" alt="Pokemon Photo">
+        </figure>
+
+    </div>
+<!-- locations on grid container for remaining cards -->
+    <div class="card">location2</div>
+    <div class="card">location3</div>
+    <div class="card">location4</div>
+    <div class="card">location5</div>
+    <div class="card">location6</div>
+</div>
+
+
+
+<!-- method by which user can view pokemon cards -->
+    <button class="btn" type="button" onclick="getPoke()">View Pokemon!</button>
+
+</main>
+
+<script src="js/app.js"></script>
+
+
 </body>
 </html>
