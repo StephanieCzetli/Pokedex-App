@@ -1,31 +1,63 @@
+* {
+  font-family: 'Noto Sans JP', sans-serif;
+}
+
 
 header {
   text-align: center;
+  padding-bottom: 4rem;;
 }
 
 .grid {
   display: grid; /*create grid container on which to place grid card*/
   border: 2px solid black; /*temporary style rule*/
-  grid-template-columns: repeat(3, 1fr); /*create 3 columns, 1 fr each*/
-  grid-template-rows: repeat(2, 5vw); /*create 2 rows, 1fr each*/
-  column-gap: 4rem; /*slightly wider gap betw columns*/
-  row-gap: 1rem; /*slightly narrower gap betw rows*/
-  padding: 2rem;  /*add padding betw grid and location items*/
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(350px, 1fr)  /*creates new rows & allows cards to wrap*/
+  );
+  column-gap: 6rem; /*slightly wider gap betw columns*/
+  row-gap: 2rem; /*slightly narrower gap betw rows*/
+  padding: 2rem; /*add padding betw grid and location items*/
 }
 
-.grid-loc { /**/
+.grid-loc { /*location on grid container for each card*/
   display: grid;
-  border: 1px dashed red; /*temporary style rule*/
-  
 }
 
 .card {
-  border: 1px solid black;
+  display: flex;
+  flex-direction:column;
+  justify-content:flex-start; /*draws items towards start of flex direction - top edge of container*/
+  min-width: 250px;
+  height: 500px;
+  background-color: orangered;
+  border: 2px solid black;
+  border-radius: 5px;
 }
 
-.btn { /*simple styles for button*/
+.card_heading {
+  display: flex;
+  justify-content: space-between; /*distributes items evenly, 1st on start & last on end of line*/
+  height: 20%;
+  background-color: chartreuse;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  font-size: 1.5rem;
+  font-weight: bold;
+  
+}
+
+.card_image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 1rem;
+}
+
+
+
+.btn {
+  /*simple styles for button*/
   margin: 1rem;
-  padding: .5rem;
+  padding: 0.5rem;
 }
-
-
