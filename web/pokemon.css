@@ -1,6 +1,7 @@
 .grid-container {
     display: grid;
-    grid-gap: 50px, 100px;
+    column-gap: 50px;
+    row-gap: 50px;
 }
 
 .grid-item {

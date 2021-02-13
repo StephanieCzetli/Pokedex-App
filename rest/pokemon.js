@@ -1,9 +1,12 @@
-const express = require('express')
-const app = express()
-const port = 3000
+const { json, response } = require('express');
+const express = require('express');
+const app = express();
+const port = 3000;
 
 
-fetch("https://pokeapi.co/api/v2/pokemon/1")
+app.post('/https://pokeapi.co/api/v2/pokemon/ditto', function(req, res) {
+        res.send()
+    }, fetch("https://pokeapi.co/api/v2/pokemon/ditto")
     .then(response => response.json())
     .then(data => {
         console.log(data);
@@ -12,9 +15,9 @@ fetch("https://pokeapi.co/api/v2/pokemon/1")
         } catch (error) {
             document.getElementsByTagName("img").innerHTML = err.message;
         }(console.error("error"));
-    });
+    }));
 
-fetch("https://pokeapi.co/api/v2/pokemon/1", {
+fetch("https://pokeapi.co/api/v2/pokemon/ditto", {
         method: POST,
         body: json.stringtoify(data),
         headers: {
@@ -29,6 +32,9 @@ fetch("https://pokeapi.co/api/v2/pokemon/1", {
         console.error(error)
     });
 
+fetch(request)
+    .then(res => res.json())
+    .then(res => console.log(res));
 
 
 console.log(`Pokedex app listening at http://localhost:${port}`)
